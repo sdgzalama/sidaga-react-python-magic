@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
-import { StartProvider } from "@tanstack/react-start";
+import { Hydrate } from "@tanstack/react-start-client/Hydrate";
 import { getRouter } from "./router";
 
 const router = getRouter();
 
-createRoot(document.getElementById("app")!).render(
-  <StartProvider router={router}>
+createRoot(document.getElementById("root")!).render(
+  <Hydrate>
     <router.App />
-  </StartProvider>,
+  </Hydrate>
 );
