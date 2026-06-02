@@ -4,7 +4,7 @@ import { getRouter } from "./router";
 
 const router = getRouter();
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("app")!).render(
   <Hydrate>
     <router.App />
   </Hydrate>
